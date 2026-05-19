@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madeira de Art</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Madeira de Art</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Decoração em MDF personalizada</h2>
+    <p>Peças únicas feitas com qualidade</p>
+    <a href="#produtos" class="btn">Ver Produtos</a>
+  </div>
+</section>
+
+<section id="produtos" class="produtos">
+  <div class="container">
+    <h2>Nossos Produtos</h2>
+
+    <div class="produtos-grid">
+
+      <!-- PRODUTO 1 -->
+      <div class="produto-card">
+        <img src="https://via.placeholder.com/400x300?text=Produto+1">
+        <h3>Mandala Floral 60cm</h3>
+        <p class="preco">R$ 129,90</p>
+        <button onclick="comprar('Mandala Floral 60cm')" class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- PRODUTO 2 -->
+      <div class="produto-card">
+        <img src="https://via.placeholder.com/400x300?text=Produto+2">
+        <h3>Relógio MDF Decorativo</h3>
+        <p class="preco">R$ 99,90</p>
+        <button onclick="comprar('Relógio MDF Decorativo')" class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- PRODUTO 3 -->
+      <div class="produto-card">
+        <img src="https://via.placeholder.com/400x300?text=Produto+3">
+        <h3>Quadro "Lar Doce Lar"</h3>
+        <p class="preco">R$ 69,90</p>
+        <button onclick="comprar('Quadro Lar Doce Lar')" class="btn-comprar">Comprar</button>
+      </div>
+
+<div class="produto-card">
+  <img src="   ">
+  <h3>caixa mae</h3>
+  <p class="preco">R$ 5,00</p>
+  <button onclick="comprar('Nome')" class="btn-comprar">Comprar</button>
+</div>
+
+      <!-- 👉 DUPLICA ESSE BLOCO PRA CRIAR MAIS PRODUTOS -->
+
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <p>WhatsApp: (42) 99964-5842</p>
+  <p>Email: franciknapp@gmail.com.br</p>
+
+  <div class="social">
+    <a href="https://instagram.com/madeiradeart" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/5542999645842" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
+
+<a href="https://wa.me/5542999645842" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function comprar(produto) {
+  const msg = `Olá! Tenho interesse em: ${produto}`;
+  window.open(`https://wa.me/5542999645842?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>

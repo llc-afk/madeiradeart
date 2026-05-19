@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  background: #f5f1ec;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: #2c1e16;
+  color: white;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1618221195710-dd1f1f8c4a0f?auto=format&fit=crop&w=1200') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #e8b923;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.produtos {
+  padding: 60px 0;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.produto-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.produto-card img {
+  width: 100%;
+}
+
+.produto-card h3 {
+  padding: 10px;
+}
+
+.preco {
+  color: #e8b923;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.btn-comprar {
+  width: 100%;
+  padding: 12px;
+  background: #2c1e16;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #2c1e16;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.social a {
+  color: white;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+}

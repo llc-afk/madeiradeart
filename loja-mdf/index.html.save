@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madeira de Art</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Madeira de Art</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Decoração em MDF Premium</h2>
+    <p>Peças únicas feitas com qualidade</p>
+    <a href="#produtos" class="btn">Ver Produtos</a>
+  </div>
+</section>
+
+<section id="produtos" class="produtos">
+  <div class="container">
+    <h2>Nossos Produtos</h2>
+
+    <div class="produtos-grid">
+
+      <!-- PRODUTO 1 -->
+      <div class="produto-card">
+        <img src="https://via.placeholder.com/400x300?text=Produto+1">
+        <h3>Mandala Floral 60cm</h3>
+        <p class="preco">R$ 129,90</p>
+        <button onclick="comprar('Mandala Floral 60cm')" class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- PRODUTO 2 -->
+      <div class="produto-card">
+        <img src="https://via.placeholder.com/400x300?text=Produto+2">
+        <h3>Relógio MDF Decorativo</h3>
+        <p class="preco">R$ 99,90</p>
+        <button onclick="comprar('Relógio MDF Decorativo')" class="btn-comprar">Comprar</button>
+      </div>
+
+      <!-- PRODUTO 3 -->
+      <div class="produto-card">
+        <img src="https://via.placeholder.com/400x300?text=Produto+3">
+        <h3>Quadro "Lar Doce Lar"</h3>
+        <p class="preco">R$ 69,90</p>
+        <button onclick="comprar('Quadro Lar Doce Lar')" class="btn-comprar">Comprar</button>
+    
+<div class="produto-card">
+  <img src="data:image/jpeg;base64,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
+
+    <!-- 👉 DUPLICA ESSE BLOCO PRA CRIAR MAIS PRODUTOS -->
+
+    </div>
+  </div>
+</ection>
+<footer id="contato">
+  <p>WhatsApp: (42) 99964-5842</p>
+  <pEmail: franciknapp@gmail.com.br</p>
+  <iv class="social">
+    <a href="https://instagram.com/madeiradeart" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </
+    a href="https://wa.me/5542999645842" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </dv>
+</footer>
+
+<a href="https://wa.me/5542999645842" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+function comprar(produto) {
+  const msg = `Olá! Tenho interesse em: ${produto}`;
+  window.open(`https://wa.me/5542999645842?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>

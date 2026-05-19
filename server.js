@@ -1,0 +1,47 @@
+const express = require('express');
+const cors = require('cors');
+const mercadopago = require('mercadopago');
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+mercadopago.configure({
+  access_token: APP_USR-1771978546796941-051617-38ba5e0efe6897805c17f8ea1d731a1c-3407518652
+});
+
+app.post('/create_preference', async (req, res) => {
+
+  try {
+
+    const preference = {
+      items: req.body.items
+    };
+
+    const response =
+      await mercadopago.preferences.create(preference);
+
+    res.json({
+      init_point: response.body.init_point
+    });
+
+  } catch (error) {
+
+    console.log(error);
+
+    res.status(500).json({
+      error: 'Erro ao criar pagamento'
+    });
+
+  }
+
+});
+
+app.get('/', (req, res) => {
+  res.send('Backend online');
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando');
+});

@@ -1,0 +1,123 @@
+<!-- ================= INDEX.HTML ================= -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Madeira de Art | Decoração em MDF</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <h1>Madeira de Art</h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h2>Decoração em MDF Premium</h2>
+    <p>Peças únicas que transformam seu ambiente</p>
+    <a href="#produtos" class="btn">Ver Produtos</a>
+  </div>
+</section>
+
+<section id="produtos" class="produtos">
+  <div class="container">
+    <h2>Nossos Produtos</h2>
+    <div class="produtos-grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="sobre" class="sobre">
+  <div class="container">
+    <h2>Sobre Nós</h2>
+    <p>Somos especialistas em decoração MDF com acabamento premium e corte a laser.</p>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="container">
+    <p>WhatsApp: (42) 99964-5842</p>
+    <p>Email: franciknapp@gmail.com.br</p>
+
+    <div class="social">
+      <a href="https://instagram.com/madeiradeart" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5542999645842" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5542999645842" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const produtos = Array.from({length:50}, (_,i)=>({
+  nome: `Produto MDF ${i+1}`,
+  preco: (Math.random()*150+50).toFixed(2),
+  img: `https://picsum.photos/400/300?random=${i}`
+}));
+
+const grid = document.getElementById('grid');
+
+produtos.forEach(p => {
+  grid.innerHTML += `
+  <div class="produto-card">
+    <img src="${p.img}">
+   <h3>${p.nome}</h3>
+    <p class="preco">R$ ${p.preco}</p>
+    <button onclick="comprar('${p.nome}')" class="btn-comprar">Comprar</button>
+  </div>`;
+});
+
+function comprar(produto){
+  const msg = `Olá! Quero comprar: ${produto}`;
+  window.open(`https://wa.me/5542999645842?text=${encodeURIComponent(msg)}`);
+}
+</script>
+
+</body>
+</html>
+
+
+/* ================= STYLE.CSS ================= */
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:sans-serif;background:#f5f1ec}
+.container{max-width:1200px;margin:auto;padding:20px}
+
+header{background:#2c1e16;color:#fff;padding:20px}
+header .container{display:flex;justify-content:space-between;align-items:center}
+nav a{color:#fff;margin-left:20px;text-decoration:none;transition:.3s}
+nav a:hover{color:#e8b923}
+
+.hero{height:70vh;background:linear-gradient(#0006,#0006),url('https://images.unsplash.com/photo-1618221195710-dd1f1f8c4a0f?auto=format&fit=crop&w=1200');background-size:cover;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero h2{font-size:3rem;margin-bottom:10px}
+
+.btn{background:#e8b923;padding:15px 30px;border-radius:30px;text-decoration:none;color:#000;font-weight:bold}
+
+.produtos{padding:80px 0}
+.produtos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+
+.produto-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.1);transition:.3s}
+.produto-card:hover{transform:translateY(-10px)}
+.produto-card img{width:100%;height:200px;object-fit:cover}
+.produto-card h3{padding:10px}
+.preco{color:#e8b923;font-weight:bold;padding:0 10px}
+
+.btn-comprar{width:100%;padding:12px;background:#2c1e16;color:#fff;border:none;cursor:pointer;transition:.3s}
+.btn-comprar:hover{background:#e8b923;color:#000}
+
+footer{background:#2c1e16;color:#fff;text-align:center;padding:30px}
+.social a{color:#fff;margin:0 10px;font-size:1.5rem}
+
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25d366;color:#fff;padding:15px;border-radius:50%;font-size:1.5rem}

@@ -1,0 +1,536 @@
+{
+  "client_version": "0.5.18",
+  "gpus": {},
+  "apis": {},
+  "runtimes": {
+    "umu-games": {
+      "name": "umu-games",
+      "created_at": "2025-12-30T07:01:14.683203Z",
+      "architecture": "all",
+      "url": "https://lutris.net/media/umu-games.json.xz",
+      "version": "",
+      "versioned": false
+    },
+    "umu": {
+      "name": "umu",
+      "created_at": "2025-11-26T23:08:55.570294Z",
+      "architecture": "all",
+      "url": "https://github.com/Open-Wine-Components/umu-launcher/releases/download/1.3.0/umu-launcher-1.3.0-zipapp.tar",
+      "version": "1.3.0",
+      "versioned": false
+    },
+    "ge-proton": {
+      "name": "ge-proton",
+      "created_at": "2025-11-02T18:24:49.834121Z",
+      "architecture": "all",
+      "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton10-25/GE-Proton10-25.tar.gz",
+      "version": "GE-Proton10-25",
+      "versioned": false
+    },
+    "dxvk": {
+      "name": "dxvk",
+      "created_at": "2025-06-10T14:36:31.409637Z",
+      "architecture": "all",
+      "url": "https://github.com/doitsujin/dxvk/releases/download/v2.6.2/dxvk-2.6.2.tar.gz",
+      "version": "v2.6.2",
+      "versioned": true
+    },
+    "icons": {
+      "name": "icons",
+      "created_at": "2025-06-04T19:21:27.841363Z",
+      "architecture": "all",
+      "url": "",
+      "version": "",
+      "versioned": false
+    },
+    "dxvk-nvapi": {
+      "name": "dxvk-nvapi",
+      "created_at": "2025-05-24T13:02:42.123211Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/dxvk-nvapi/releases/download/v0.9.0/dxvk-nvapi-v0.9.0.tar.xz",
+      "version": "v0.9.0",
+      "versioned": true
+    },
+    "winetricks": {
+      "name": "winetricks",
+      "created_at": "2025-04-14T05:47:00.544900Z",
+      "architecture": "all",
+      "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/tools/winetricks/winetricks-20250413-x86_64.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "dgvoodoo2": {
+      "name": "dgvoodoo2",
+      "created_at": "2025-03-18T06:34:24.707552Z",
+      "architecture": "all",
+      "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runtime/dgvoodoo2-v2.8.2.tar.xz",
+      "version": "v2.8.2",
+      "versioned": true
+    },
+    "vkd3d": {
+      "name": "vkd3d",
+      "created_at": "2024-12-19T20:44:38.414277Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/vkd3d/releases/download/v2.14/vkd3d-2.14.tar.xz",
+      "version": "v2.14",
+      "versioned": true
+    },
+    "battleye_runtime": {
+      "name": "battleye_runtime",
+      "created_at": "2024-05-21T19:35:07.389453Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2024-05-21/battleeye_runtime.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "eac_runtime": {
+      "name": "eac_runtime",
+      "created_at": "2024-01-14T19:38:26.671443Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2022.06.23/eac_runtime-20240114.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "d3d_extras": {
+      "name": "d3d_extras",
+      "created_at": "2023-08-04T10:19:18.988850Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/d3d_extras/releases/download/v2/v2.tar.xz",
+      "version": "v2",
+      "versioned": true
+    },
+    "innoextract-1.9-linux": {
+      "name": "innoextract-1.9-linux",
+      "created_at": "2023-06-26T04:34:45.500205Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2021.11.14/innoextract-1.9-linux.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "p7zip": {
+      "name": "p7zip",
+      "created_at": "2023-06-26T04:34:45.497970Z",
+      "architecture": "x86_64",
+      "url": "https://github.com/lutris/buildbot/releases/download/2021.11.14/p7zip-16.02-x86_64.tar.gz",
+      "version": "",
+      "versioned": false
+    },
+    "gamecontrollerdb": {
+      "name": "gamecontrollerdb",
+      "created_at": "2023-06-26T04:34:45.495853Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2021.11.14/gamecontrollerdb-20181215.tar.gz",
+      "version": "",
+      "versioned": false
+    },
+    "network-tools": {
+      "name": "network-tools",
+      "created_at": "2023-06-26T04:34:45.491498Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2021.11.20/network-tools.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "Ubuntu-18.04-i686": {
+      "name": "Ubuntu-18.04-i686",
+      "created_at": "2023-06-26T04:34:45.487448Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2022.06.23/Ubuntu-18.04-i686.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "Ubuntu-18.04-x86_64": {
+      "name": "Ubuntu-18.04-x86_64",
+      "created_at": "2023-06-26T04:34:45.485380Z",
+      "architecture": "all",
+      "url": "https://github.com/lutris/buildbot/releases/download/2022.06.23/Ubuntu-18.04-x86_64.tar.xz",
+      "version": "",
+      "versioned": false
+    },
+    "dxvk-cache-tool": {
+      "name": "dxvk-cache-tool",
+      "created_at": "2023-06-26T04:34:45.482945Z",
+      "architecture": "x86_64",
+      "url": "https://github.com/lutris/dxvk-cache-tool/releases/download/20221023/dxvk-cache-tool.tar.xz",
+      "version": "",
+      "versioned": false
+    }
+  },
+  "runners": {
+    "ags": [
+      {
+        "name": "ags",
+        "version": "3.6.1.9",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/ags/ags-3.6.1.9-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "atari800": [
+      {
+        "name": "atari800",
+        "version": "4.2.0",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/atari800/atari800-4.2.0-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "browser": [],
+    "cemu": [
+      {
+        "name": "cemu",
+        "version": "2.0-73",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/cemu/Cemu_2.0-73.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "citra": [
+      {
+        "name": "citra",
+        "version": "2067",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/citra/citra-2067-x86_64.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "desmume": [],
+    "dgen": [
+      {
+        "name": "dgen",
+        "version": "1.33",
+        "url": "https://lutris.net/files/runners/dgen-1.33-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "dgen",
+        "version": "1.33",
+        "url": "https://lutris.net/files/runners/dgen-1.33-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "dolphin": [
+      {
+        "name": "dolphin",
+        "version": "5.0-20128",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/dolphin/dolphin-5.0-20128-x86_64.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "dosbox": [
+      {
+        "name": "dosbox",
+        "version": "staging-0.80.1",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/dosbox/dosbox-staging-0.80.1_x64.tar.xz",
+        "architecture": "x86_64"
+      },
+      {
+        "name": "dosbox",
+        "version": "svn3951",
+        "url": "https://lutris.net/files/runners/dosbox-svn3951-i686.tar.gz",
+        "architecture": "i386"
+      }
+    ],
+    "frotz": [
+      {
+        "name": "frotz",
+        "version": "2.44",
+        "url": "https://lutris.net/files/runners/frotz-2.44-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "frotz",
+        "version": "2.44",
+        "url": "https://lutris.net/files/runners/frotz-2.44-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "fsuae": [
+      {
+        "name": "fsuae",
+        "version": "2.8.4",
+        "url": "https://lutris.net/files/runners/fs-uae-2.8.4-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "fsuae",
+        "version": "2.8.4",
+        "url": "https://lutris.net/files/runners/fs-uae-2.8.4-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "hatari": [
+      {
+        "name": "hatari",
+        "version": "2.5.0-dev",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/hatari/hatari-2.5.0-dev-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "jzintv": [
+      {
+        "name": "jzintv",
+        "version": "20150213",
+        "url": "https://lutris.net/files/runners/jzintv-20150213-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "libretro": [
+      {
+        "name": "libretro",
+        "version": "retroarch-1.9.13.2",
+        "url": "https://github.com/lutris/libretro-super/releases/download/v1.9.13.2/retroarch-v1.9.13.2-x86_64.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "linux": [],
+    "mame": [
+      {
+        "name": "mame",
+        "version": "0.258",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/mame/mame-0.258-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "mednafen": [
+      {
+        "name": "mednafen",
+        "version": "1.32.1",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/mednafen/mednafen-1.32.1-x86_64.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "microm8": [],
+    "mupen64plus": [],
+    "o2em": [
+      {
+        "name": "o2em",
+        "version": "1.18",
+        "url": "https://lutris.net/files/runners/o2em-1.18-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "o2em",
+        "version": "1.18",
+        "url": "https://lutris.net/files/runners/o2em-1.18-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "openmsx": [],
+    "osmose": [
+      {
+        "name": "osmose",
+        "version": "0.9.96",
+        "url": "https://lutris.net/files/runners/osmose-0.9.96-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "osmose",
+        "version": "0.9.96",
+        "url": "https://lutris.net/files/runners/osmose-0.9.96-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "pcsx2": [
+      {
+        "name": "pcsx2",
+        "version": "1.6.0",
+        "url": "https://lutris.nyc3.digitaloceanspaces.com/runners/pcsx2/pcsx2-1.6.0-x86_64.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "pcsx2",
+        "version": "1.7.4452",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/pcsx2/pcsx2-v1.7.4452-linux-AppImage-64bit-Qt-2.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "pcsxr": [
+      {
+        "name": "pcsxr",
+        "version": "1.9.95",
+        "url": "https://lutris.net/files/runners/pcsxr-1.9.95-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "pcsxr",
+        "version": "1.9.95",
+        "url": "https://lutris.net/files/runners/pcsxr-1.9.95-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "pico8": [
+      {
+        "name": "pico8",
+        "version": "0.1.0",
+        "url": "https://github.com/daniel-j/lutris-pico-8-runner/archive/master.tar.gz",
+        "architecture": "all"
+      }
+    ],
+    "ppsspp": [
+      {
+        "name": "ppsspp",
+        "version": "1.14.4",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners%2Fppsspp%2Fppsspp-1.14.4-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "reicast": [],
+    "residualvm": [
+      {
+        "name": "residualvm",
+        "version": "20190902",
+        "url": "https://lutris.net/files/runners/residualvm-20190902-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "residualvm",
+        "version": "20190907",
+        "url": "https://lutris.net/files/runners/residualvm-20190907-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "rpcs3": [
+      {
+        "name": "rpcs3",
+        "version": "v0.0.27-14945",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/rpcs3/rpcs3-v0.0.27-14945-47da39a2_linux64-b.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "ruffle": [
+      {
+        "name": "ruffle",
+        "version": "2023_10_14",
+        "url": "https://github.com/ruffle-rs/ruffle/releases/download/nightly-2023-10-14/ruffle-nightly-2023_10_14-linux-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "scummvm": [
+      {
+        "name": "scummvm",
+        "version": "1.8.0",
+        "url": "https://lutris.net/files/runners/scummvm-1.8.0-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "scummvm",
+        "version": "2.8.0",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/scummvm/scummvm_2.8-git-21-04-2023.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "snes9x": [
+      {
+        "name": "snes9x",
+        "version": "1.53",
+        "url": "https://lutris.net/files/runners/snes9x-1.53-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "snes9x",
+        "version": "1.53",
+        "url": "https://lutris.net/files/runners/snes9x-1.53-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "steam": [],
+    "winesteam": [],
+    "stella": [
+      {
+        "name": "stella",
+        "version": "4.6.7",
+        "url": "https://lutris.net/files/runners/stella-4.6.7-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "stella",
+        "version": "4.6.7",
+        "url": "https://lutris.net/files/runners/stella-4.6.7-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "vice": [
+      {
+        "name": "vice",
+        "version": "2.4",
+        "url": "https://lutris.net/files/runners/vice-2.4-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "vice",
+        "version": "r34400",
+        "url": "https://lutris.net/files/runners/vice-r34400-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "virtualjaguar": [
+      {
+        "name": "virtualjaguar",
+        "version": "2.1.2",
+        "url": "https://lutris.net/files/runners/virtualjaguar-2.1.2-x86_64.tar.gz",
+        "architecture": "x86_64"
+      }
+    ],
+    "web": [
+      {
+        "name": "web",
+        "version": "0.0.15",
+        "url": "https://github.com/lutris/web-runner/releases/download/v0.0.15/web-0.0.15-x86_64.tar.xz",
+        "architecture": "x86_64"
+      },
+      {
+        "name": "web",
+        "version": "0.0.9",
+        "url": "https://lutris.net/files/runners/web-0.0.9-armv7l.tar.gz",
+        "architecture": "armv7"
+      },
+      {
+        "name": "web",
+        "version": "0.0.9",
+        "url": "https://lutris.net/files/runners/web-0.0.9-i686.tar.gz",
+        "architecture": "i386"
+      }
+    ],
+    "wine": [
+      {
+        "name": "wine",
+        "version": "wine-ge-8-26",
+        "url": "https://github.com/GloriousEggroll/wine-ge-custom/releases/download/GE-Proton8-26/wine-lutris-GE-Proton8-26-x86_64.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "xemu": [
+      {
+        "name": "xemu",
+        "version": "0.7.111",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/xemu/xemu-v0.7.111-x86_64.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "yuzu": [
+      {
+        "name": "yuzu",
+        "version": "20230805",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/yuzu/yuzu-linux-20230805-755f45a52.tar.xz",
+        "architecture": "x86_64"
+      }
+    ],
+    "zdoom": [
+      {
+        "name": "zdoom",
+        "version": "gzdoom-g2.3.2",
+        "url": "https://lutris.net/files/runners/gzdoom-g2.3.2-i686.tar.gz",
+        "architecture": "i386"
+      },
+      {
+        "name": "zdoom",
+        "version": "GZDoom.v4.10.0.LinuxPortable",
+        "url": "https://lutris.nyc3.cdn.digitaloceanspaces.com/runners/zdoom/GZDoom.v4.10.0.LinuxPortable.tar.xz",
+        "architecture": "x86_64"
+      }
+    ]
+  },
+  "hw_support": {
+    "vulkan": true,
+    "vulkan_1_3": true,
+    "directx_11": true,
+    "directx_12": true
+  }
+}

@@ -1,0 +1,119 @@
+[INFO:2026-01-10 21:13:08,501:application]: Starting Lutris 0.5.18
+[INFO:2026-01-10 21:13:08,638:__init__]: Running migration: mess_to_mame
+[INFO:2026-01-10 21:13:08,639:__init__]: Running migration: migrate_hidden_ids
+[INFO:2026-01-10 21:13:08,641:__init__]: Running migration: migrate_steam_appids
+[INFO:2026-01-10 21:13:08,644:__init__]: Running migration: migrate_banners
+[INFO:2026-01-10 21:13:08,645:__init__]: Running migration: retrieve_discord_appids
+[INFO:2026-01-10 21:13:08,646:retrieve_discord_appids]: Updating Games Discord APP ID's
+[INFO:2026-01-10 21:13:08,646:__init__]: Running migration: migrate_sortname
+[INFO:2026-01-10 21:13:08,647:migrate_sortname]: Adding blank sortname field to database
+[INFO:2026-01-10 21:13:08,648:__init__]: Running migration: migrate_hidden_category
+[INFO:2026-01-10 21:13:08,648:migrate_hidden_category]: Moving hidden games to the '.hidden' category
+[ERROR:2026-01-10 21:13:08,649:startup]: i386 libGL.so.1 missing (needed by opengl)
+[ERROR:2026-01-10 21:13:08,649:startup]: i386 libvulkan.so.1 missing (needed by vulkan)
+[ERROR:2026-01-10 21:13:08,649:startup]: i386 libgnutls.so.30 missing (needed by gnutls)
+[WARNING:2026-01-10 21:13:09,936:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/umu-games
+[ERROR:2026-01-10 21:13:09,940:jobs]: Error while completing task <bound method RuntimeExtractedComponentUpdater._install of <lutris.runtime.RuntimeExtractedComponentUpdater object at 0x7fe4a81fe490>>: <class 'lutris.exceptions.MissingExecutableError'> The executable '7z' could not be found.
+[ERROR:2026-01-10 21:13:09,942:runtime]: Runtime update failed: The executable '7z' could not be found.
+[WARNING:2026-01-10 21:13:10,597:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/umu
+[WARNING:2026-01-10 21:13:12,040:runtime]: Failed to get 'hicolor/64x64/apps/gens.png': [Errno 17] File exists: '/home/brunoknapp9/.local/share/lutris/runtime/icons/hicolor/64x64/apps'
+[WARNING:2026-01-10 21:13:12,042:runtime]: Failed to get 'hicolor/64x64/apps/frotz.png': [Errno 17] File exists: '/home/brunoknapp9/.local/share/lutris/runtime/icons/hicolor/64x64/apps'
+[WARNING:2026-01-10 21:13:17,778:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/winetricks
+[WARNING:2026-01-10 21:13:19,132:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/battleye_runtime
+[WARNING:2026-01-10 21:13:19,510:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/eac_runtime
+[WARNING:2026-01-10 21:13:21,493:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/innoextract-1.9-linux
+[WARNING:2026-01-10 21:13:22,050:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/p7zip
+[WARNING:2026-01-10 21:13:22,511:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/gamecontrollerdb
+[WARNING:2026-01-10 21:13:23,332:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/network-tools
+[WARNING:2026-01-10 21:13:29,367:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/Ubuntu-18.04-i686
+[WARNING:2026-01-10 21:13:33,170:linux]: Command '7z' not found on your system
+[WARNING:2026-01-10 21:13:33,170:linux]: Command 'lspci' not found on your system
+[WARNING:2026-01-10 21:13:33,171:linux]: Command 'wine' not found on your system
+[ERROR:2026-01-10 21:13:33,362:linux]: Couldn't find a terminal emulator.
+[INFO:2026-01-10 21:13:34,078:application]: Starting Lutris 0.5.18
+[ERROR:2026-01-10 21:13:34,084:startup]: i386 libGL.so.1 missing (needed by opengl)
+[ERROR:2026-01-10 21:13:34,084:startup]: i386 libvulkan.so.1 missing (needed by vulkan)
+[ERROR:2026-01-10 21:13:34,084:startup]: i386 libgnutls.so.30 missing (needed by gnutls)
+[WARNING:2026-01-10 21:13:34,951:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/Ubuntu-18.04-x86_64
+[WARNING:2026-01-10 21:13:35,369:system]: Non existent path: /home/brunoknapp9/.local/share/lutris/runtime/dxvk-cache-tool
+[ERROR:2026-01-10 21:13:37,983:config]: Unable to generate a default for 'version': No versions of Wine are installed.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/lutris/config.py", line 240, in get_defaults
+    default = default()
+              ^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lutris/util/wine/wine.py", line 203, in get_default_wine_version
+    raise UnavailableRunnerError(_("No versions of Wine are installed."))
+lutris.exceptions.UnavailableRunnerError: No versions of Wine are installed.
+[ERROR:2026-01-10 21:13:38,010:config]: Unable to generate a default for 'version': No versions of Wine are installed.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/lutris/config.py", line 240, in get_defaults
+    default = default()
+              ^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lutris/util/wine/wine.py", line 203, in get_default_wine_version
+    raise UnavailableRunnerError(_("No versions of Wine are installed."))
+lutris.exceptions.UnavailableRunnerError: No versions of Wine are installed.
+[ERROR:2026-01-10 21:13:39,667:config]: Unable to generate a default for 'version': No versions of Wine are installed.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/lutris/config.py", line 240, in get_defaults
+    default = default()
+              ^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lutris/util/wine/wine.py", line 203, in get_default_wine_version
+    raise UnavailableRunnerError(_("No versions of Wine are installed."))
+lutris.exceptions.UnavailableRunnerError: No versions of Wine are installed.
+[ERROR:2026-01-10 21:13:39,686:config]: Unable to generate a default for 'version': No versions of Wine are installed.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/lutris/config.py", line 240, in get_defaults
+    default = default()
+              ^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lutris/util/wine/wine.py", line 203, in get_default_wine_version
+    raise UnavailableRunnerError(_("No versions of Wine are installed."))
+lutris.exceptions.UnavailableRunnerError: No versions of Wine are installed.
+[INFO:2026-01-10 21:13:39,687:interpreter]: Runner wine needs to be installed
+[ERROR:2026-01-10 21:13:39,705:config]: Unable to generate a default for 'version': No versions of Wine are installed.
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/lutris/config.py", line 240, in get_defaults
+    default = default()
+              ^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/lutris/util/wine/wine.py", line 203, in get_default_wine_version
+    raise UnavailableRunnerError(_("No versions of Wine are installed."))
+lutris.exceptions.UnavailableRunnerError: No versions of Wine are installed.
+[INFO:2026-01-10 21:14:21,175:file_box]: Download completed
+[INFO:2026-01-10 21:14:21,176:files_box]: All files available
+[INFO:2026-01-10 21:14:21,176:installerwindow]: All files are available, continuing install
+[INFO:2026-01-10 21:14:21,177:installerwindow]: Launching installer commands
+[INFO:2026-01-10 21:14:21,298:wine]: Creating a win64 prefix in /home/brunoknapp9/Games/ps4-remote-play
+[INFO:2026-01-10 21:14:21,299:wine]: Winepath: /home/brunoknapp9/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+[WARNING:2026-01-10 21:14:51,837:wine]: Wine prefix creation is taking longer than expected...
+[INFO:2026-01-10 21:16:54,111:interpreter]: Cancelling installation of PS4 Remote Play
+[WARNING:2026-01-10 21:18:31,062:linux]: Command '7z' not found on your system
+[WARNING:2026-01-10 21:18:31,064:linux]: Command 'lspci' not found on your system
+[WARNING:2026-01-10 21:18:31,064:linux]: Command 'wine' not found on your system
+[ERROR:2026-01-10 21:18:31,259:linux]: Couldn't find a terminal emulator.
+[INFO:2026-01-10 21:18:31,968:application]: Starting Lutris 0.5.18
+[ERROR:2026-01-10 21:18:31,971:startup]: i386 libGL.so.1 missing (needed by opengl)
+[ERROR:2026-01-10 21:18:31,972:startup]: i386 libvulkan.so.1 missing (needed by vulkan)
+[ERROR:2026-01-10 21:18:31,972:startup]: i386 libgnutls.so.30 missing (needed by gnutls)
+[INFO:2026-01-10 21:18:36,417:file_box]: Download completed
+[INFO:2026-01-10 21:18:36,417:files_box]: All files available
+[INFO:2026-01-10 21:18:36,417:installerwindow]: All files are available, continuing install
+[INFO:2026-01-10 21:18:36,418:installerwindow]: Launching installer commands
+[INFO:2026-01-10 21:18:36,547:wine]: Creating a win64 prefix in /home/brunoknapp9/Games/ps4-remote-play
+[INFO:2026-01-10 21:18:36,547:wine]: Winepath: /home/brunoknapp9/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+[WARNING:2026-01-10 21:19:07,080:wine]: Wine prefix creation is taking longer than expected...
+[ERROR:2026-01-10 21:22:41,768:wine]: No user.reg found after prefix creation. Prefix might not be valid
+[ERROR:2026-01-10 21:26:57,000:wine]: No user.reg found after prefix creation. Prefix might not be valid
+[INFO:2026-01-10 21:26:57,155:wine]: Creating a win64 prefix in /home/brunoknapp9/Games/ps4-remote-play
+[INFO:2026-01-10 21:26:57,155:wine]: Winepath: /home/brunoknapp9/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+[WARNING:2026-01-10 21:27:27,689:wine]: Wine prefix creation is taking longer than expected...
+[ERROR:2026-01-10 21:35:17,537:wine]: No user.reg found after prefix creation. Prefix might not be valid
+[WARNING:2026-01-10 21:35:17,560:wine]: Wine is not installed on your system; required dependencies may be missing.
+[WARNING:2026-01-10 21:35:17,560:wine]: No valid prefix detected in /home/brunoknapp9/Games/ps4-remote-play, creating one...
+[INFO:2026-01-10 21:35:17,560:wine]: Creating a win64 prefix in /home/brunoknapp9/Games/ps4-remote-play
+[INFO:2026-01-10 21:35:17,560:wine]: Winepath: /home/brunoknapp9/.local/share/lutris/runners/wine/wine-ge-8-26-x86_64/bin/wine
+[WARNING:2026-01-10 21:35:48,087:wine]: Wine prefix creation is taking longer than expected...
+[ERROR:2026-01-10 21:43:37,969:wine]: No user.reg found after prefix creation. Prefix might not be valid
+[ERROR:2026-01-10 21:43:37,973:registry]: No registry file at /home/brunoknapp9/Games/ps4-remote-play/user.reg
+[ERROR:2026-01-10 21:43:37,974:jobs]: Error while completing task <bound method CommandsMixin.task of <interpreter.ScriptInterpreter object at 0x7fe4ba983140 (lutris+installer+interpreter+ScriptInterpreter at 0x249ed240)>>: <class 'OSError'> Invalid Wine prefix path /home/brunoknapp9/Games/ps4-remote-play, make sure to create the prefix before saving to a registry
+[ERROR:2026-01-10 21:43:37,988:interpreter]: Last install command failed, show error
+[INFO:2026-01-10 21:43:50,948:interpreter]: Cancelling installation of PS4 Remote Play
+[INFO:2026-01-10 21:43:53,739:application]: Shutting down Lutris

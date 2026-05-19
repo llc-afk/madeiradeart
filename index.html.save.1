@@ -1,0 +1,39 @@
+<div cass="produto-bottom">
+
+  <span>
+    R$ 150
+  </span>
+
+  <div class="quantidade-box">
+
+    <button
+      class="qty-btn"
+      onclick="diminuirQuantidade(this)"
+    >
+      -
+    </button>
+
+    <span class="qty-number">
+      1
+    </span>
+
+    <button
+      class="qty-btn"
+      onclick="aumentarQuantidade(this)"
+    >
+      +
+    </button>
+
+  </div>
+
+  <button
+    onclick="adicionarCarrinhoQuantidade(
+      this,
+      'Nome do Produto',
+      150
+    )"
+  >
+    Adicionar
+  </button>
+
+</div>

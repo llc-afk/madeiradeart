@@ -1,0 +1,30 @@
+<
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madeira de Art</title>
+  <link rel="stylesheet" href="style.css">  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body
+
+<heaer>
+  <iv class="container">
+    <h1>Madeira de Art</h1>
+   <nav>
+      <a href="#home">Início</a><a href="#produtos">Produtos</a>
+     a href="#contato">Contato</a>
+    </nav>
+ </div
+</header><section id="home" class="hero">
+  <div cass="hero-content"
+    <h2Arte em MDF que transforma seu abiente</h2>
+    <Peças únicas feitas com carinho</phref="#produtos" class="btn">Ver Produtos</a>
+  </iv
+</sction>
+<stion id="produtos" class="produtos">
+ <div class="container">
+    <h2>Produtos</h2>
+  <div class="produtos-grid">
+      <div class="produto-cad">
+        <img src="https://iages.unspl
