@@ -995,14 +995,6 @@
 
 <div class="cart-footer">
 
-  <h3>
-    Total:
-    R$
-    <span id="cart-total">
-      0
-    </span>
-  </h3>
-
   <div class="checkout-form">
 
     <input
@@ -1033,18 +1025,41 @@
       type="text"
       id="cep"
       placeholder="CEP"
+      inputmode="numeric"
+      autocomplete="postal-code"
+      maxlength="9"
     >
+
+    <div class="frete-calculo">
+      <div class="frete-calculo-topo">
+        <div>
+          <strong>Entrega</strong>
+          <span>Informe o CEP para calcular o frete.</span>
+        </div>
+        <button class="calcular-frete-btn" id="calcular-frete" type="button">
+          Calcular frete
+        </button>
+      </div>
+      <p id="frete-status" class="frete-status" aria-live="polite"></p>
+      <div id="opcoes-frete" class="opcoes-frete" aria-live="polite"></div>
+    </div>
 
   </div>
 
-<button
-  class="checkout-btn disabled"
-  id="checkout-button"
-  onclick="finalizarCompra()"
-  disabled
->
-  Finalizar Compra
-</button>
+  <div class="resumo-pedido" aria-label="Resumo do pedido">
+    <div><span>Produtos</span><strong id="cart-subtotal">R$ 0,00</strong></div>
+    <div><span>Frete</span><strong id="cart-frete">Calcule o frete</strong></div>
+    <div class="resumo-total"><span>Total</span><strong id="cart-total">R$ 0,00</strong></div>
+  </div>
+
+  <button
+    class="checkout-btn disabled"
+    id="checkout-button"
+    onclick="finalizarCompra()"
+    disabled
+  >
+    Finalizar Compra
+  </button>
 
 </div>
 

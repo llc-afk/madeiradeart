@@ -1,4 +1,36 @@
 let carrinho = [];
+let freteSelecionado = null;
+let subtotalAtual = 0;
+
+const fretePorUf = {
+  PR: { valor: 14.9, prazo: '3 a 6 dias úteis' },
+  SC: { valor: 18.9, prazo: '4 a 7 dias úteis' },
+  RS: { valor: 18.9, prazo: '4 a 7 dias úteis' },
+  SP: { valor: 22.9, prazo: '5 a 8 dias úteis' },
+  RJ: { valor: 24.9, prazo: '5 a 9 dias úteis' },
+  MG: { valor: 24.9, prazo: '5 a 9 dias úteis' },
+  ES: { valor: 24.9, prazo: '5 a 9 dias úteis' },
+  GO: { valor: 28.9, prazo: '6 a 10 dias úteis' },
+  DF: { valor: 28.9, prazo: '6 a 10 dias úteis' },
+  MT: { valor: 31.9, prazo: '7 a 11 dias úteis' },
+  MS: { valor: 31.9, prazo: '7 a 11 dias úteis' },
+  BA: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  PE: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  CE: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  MA: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  PB: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  RN: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  AL: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  SE: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  PI: { valor: 34.9, prazo: '7 a 12 dias úteis' },
+  AC: { valor: 42.9, prazo: '9 a 15 dias úteis' },
+  AP: { valor: 42.9, prazo: '9 a 15 dias úteis' },
+  AM: { valor: 42.9, prazo: '9 a 15 dias úteis' },
+  PA: { valor: 42.9, prazo: '9 a 15 dias úteis' },
+  RO: { valor: 42.9, prazo: '9 a 15 dias úteis' },
+  RR: { valor: 42.9, prazo: '9 a 15 dias úteis' },
+  TO: { valor: 42.9, prazo: '9 a 15 dias úteis' }
+};
 
 try {
   carrinho = JSON.parse(localStorage.getItem('madeira-de-art-carrinho') || '[]');
@@ -12,6 +44,34 @@ function salvarCarrinho() {
   } catch (erro) {
     // O catálogo continua funcionando mesmo quando o navegador bloqueia o armazenamento local.
   }
+}
+
+function formatarMoeda(valor) {
+  return Number(valor || 0).toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  });
+}
+
+function atualizarResumoPedido() {
+  const subtotal = document.getElementById('cart-subtotal');
+  const frete = document.getElementById('cart-frete');
+  const total = document.getElementById('cart-total');
+  const valorFrete = freteSelecionado?.valor || 0;
+
+  if (subtotal) subtotal.textContent = formatarMoeda(subtotalAtual);
+  if (frete) frete.textContent = freteSelecionado ? formatarMoeda(valorFrete) : 'Calcule o frete';
+  if (total) total.textContent = formatarMoeda(subtotalAtual + valorFrete);
+}
+
+function limparFrete() {
+  freteSelecionado = null;
+  const opcoes = document.getElementById('opcoes-frete');
+  const status = document.getElementById('frete-status');
+  if (opcoes) opcoes.innerHTML = '';
+  if (status) status.textContent = '';
+  atualizarResumoPedido();
+  verificarFormulario();
 }
 
 /* =========================================
@@ -197,6 +257,8 @@ function adicionarCarrinho(nome, preco) {
     preco
   });
 
+  limparFrete();
+
   salvarCarrinho();
 
   atualizarCarrinho();
@@ -230,9 +292,6 @@ function abrirCarrinho() {
   const items =
     document.getElementById('cart-items');
 
-  const total =
-    document.getElementById('cart-total');
-
   items.innerHTML = '';
 
   const agrupados = carrinho.reduce((grupos, produto) => {
@@ -262,7 +321,8 @@ function abrirCarrinho() {
     items.innerHTML = '<p class="cart-vazio">Seu carrinho está vazio. Escolha uma peça para começar.</p>';
   }
 
-  total.innerText = valorTotal.toFixed(2).replace('.', ',');
+  subtotalAtual = valorTotal;
+  atualizarResumoPedido();
 
   modal.style.display = 'flex';
 
@@ -271,8 +331,84 @@ function abrirCarrinho() {
 function removerDoCarrinho(nome, preco) {
   const indice = carrinho.findIndex(produto => produto.nome === nome && produto.preco === preco);
   if (indice !== -1) carrinho.splice(indice, 1);
+  limparFrete();
   atualizarCarrinho();
   abrirCarrinho();
+}
+
+async function calcularFrete() {
+  const cepInput = document.getElementById('cep');
+  const botao = document.getElementById('calcular-frete');
+  const status = document.getElementById('frete-status');
+  const cep = cepInput.value.replace(/\D/g, '');
+
+  if (carrinho.length === 0) {
+    alert('Adicione pelo menos um produto antes de calcular o frete.');
+    return;
+  }
+
+  if (cep.length !== 8) {
+    status.textContent = 'Informe um CEP válido com 8 números.';
+    status.classList.add('erro');
+    return;
+  }
+
+  botao.disabled = true;
+  botao.textContent = 'Calculando...';
+  status.classList.remove('erro');
+  status.textContent = 'Consultando o endereço e as opções de entrega...';
+
+  try {
+    const resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const endereco = await resposta.json();
+
+    if (!resposta.ok || endereco.erro || !fretePorUf[endereco.uf]) {
+      throw new Error('CEP não encontrado');
+    }
+
+    const configuracao = fretePorUf[endereco.uf];
+    const adicionalPorItem = Math.max(0, carrinho.length - 1) * 1.5;
+    const economico = Number((configuracao.valor + adicionalPorItem).toFixed(2));
+    const expresso = Number((economico * 1.45).toFixed(2));
+    const opcoes = [
+      { id: 'economica', nome: 'Entrega econômica', valor: economico, prazo: configuracao.prazo },
+      { id: 'expressa', nome: 'Entrega expressa', valor: expresso, prazo: '2 a 5 dias úteis' }
+    ];
+
+    if (!document.getElementById('cidade').value.trim()) document.getElementById('cidade').value = endereco.localidade || '';
+    if (!document.getElementById('endereco').value.trim()) document.getElementById('endereco').value = endereco.logradouro || '';
+
+    document.getElementById('opcoes-frete').innerHTML = opcoes.map((opcao, indice) => `
+      <label class="opcao-frete">
+        <input type="radio" name="opcao-frete" value="${opcao.id}" ${indice === 0 ? 'checked' : ''}>
+        <span><strong>${opcao.nome}</strong><span>Chega em ${opcao.prazo}</span></span>
+        <b>${formatarMoeda(opcao.valor)}</b>
+      </label>
+    `).join('');
+
+    const selecionarFrete = (id) => {
+      freteSelecionado = { ...opcoes.find((opcao) => opcao.id === id), uf: endereco.uf, cep };
+      atualizarResumoPedido();
+      verificarFormulario();
+    };
+
+    document.querySelectorAll('input[name="opcao-frete"]').forEach((opcao) => {
+      opcao.addEventListener('change', () => selecionarFrete(opcao.value));
+    });
+
+    selecionarFrete('economica');
+    status.textContent = `Estimativa para ${endereco.localidade}/${endereco.uf}. O prazo começa após a confirmação do pagamento.`;
+  } catch (erro) {
+    freteSelecionado = null;
+    document.getElementById('opcoes-frete').innerHTML = '';
+    status.textContent = 'Não foi possível calcular para este CEP. Confira os números e tente novamente.';
+    status.classList.add('erro');
+    atualizarResumoPedido();
+    verificarFormulario();
+  } finally {
+    botao.disabled = false;
+    botao.textContent = 'Calcular frete';
+  }
 }
 
 /* =========================================
@@ -298,6 +434,11 @@ async function finalizarCompra() {
 
     return;
 
+  }
+
+  if (!freteSelecionado) {
+    alert('Calcule e selecione uma opção de frete antes de finalizar.');
+    return;
   }
 
   // CAMPOS DO CLIENTE
@@ -335,17 +476,26 @@ async function finalizarCompra() {
 
   // PRODUTOS
 
-  const items = carrinho.map(produto => ({
+  const itemsAgrupados = carrinho.reduce((grupos, produto) => {
+    const chave = `${produto.nome}-${produto.preco}`;
+    if (!grupos[chave]) grupos[chave] = { ...produto, quantidade: 0 };
+    grupos[chave].quantidade += 1;
+    return grupos;
+  }, {});
 
+  const items = Object.values(itemsAgrupados).map(produto => ({
     title: produto.nome,
-
-    quantity: 1,
-
+    quantity: produto.quantidade,
     unit_price: Number(produto.preco),
-
     currency_id: 'BRL'
-
   }));
+
+  items.push({
+    title: `Frete — ${freteSelecionado.nome}`,
+    quantity: 1,
+    unit_price: Number(freteSelecionado.valor),
+    currency_id: 'BRL'
+  });
 
   try {
 
@@ -368,8 +518,10 @@ async function finalizarCompra() {
             telefone,
             endereco,
             cidade,
-            cep
-          }
+            cep,
+            frete: freteSelecionado
+          },
+          total: subtotalAtual + freteSelecionado.valor
 
         })
 
@@ -426,7 +578,7 @@ function verificarFormulario() {
 
   });
 
-  if (formularioCompleto) {
+  if (formularioCompleto && freteSelecionado) {
 
     botaoCheckout.disabled = false;
 
@@ -454,3 +606,14 @@ camposCheckout.forEach(campo => {
   );
 
 });
+
+const cepCheckout = document.getElementById('cep');
+const botaoCalcularFrete = document.getElementById('calcular-frete');
+
+cepCheckout.addEventListener('input', () => {
+  const numeros = cepCheckout.value.replace(/\D/g, '').slice(0, 8);
+  cepCheckout.value = numeros.replace(/(\d{5})(\d)/, '$1-$2');
+  limparFrete();
+});
+
+botaoCalcularFrete.addEventListener('click', calcularFrete);
